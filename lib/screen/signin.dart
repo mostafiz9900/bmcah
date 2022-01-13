@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class SigninPage extends StatelessWidget {
   TextEditingController emailController = TextEditingController();
@@ -34,7 +35,7 @@ class SigninPage extends StatelessWidget {
             keyboardType: TextInputType.emailAddress,
             autofocus: false,
             obscureText: true,
-            decoration: InputDecoration(            
+            decoration: InputDecoration(
               hintText: 'Password',
               labelText: 'Password',
               contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
@@ -45,21 +46,36 @@ class SigninPage extends StatelessWidget {
           SizedBox(
             height: 15.0,
           ),
-          ElevatedButton(onPressed: ()async {
-             print(emailController.text);
-                  print(passwordController.text);
-                  try {
-                    final user = await auth.signInWithEmailAndPassword(
-                        email: emailController.text.toString(),
-                        password: passwordController.text.toString().trim());
-                    if (user != null) {
-                      print(user);
-                      Navigator.pushNamed(context, '/');
-                    }
-                  } on FirebaseAuthException catch (e) {
-                    print(e.code);
+          ElevatedButton(
+              onPressed: () async {
+                print(emailController.text);
+                print(passwordController.text);
+                try {
+                  final user = await auth.signInWithEmailAndPassword(
+                      email: emailController.text.toString(),
+                      password: passwordController.text.toString().trim());
+                  if (user != null) {
+                    print(user);
+                    Navigator.pushNamed(context, '/');
                   }
-          }, child: Text('Signin')),
+                } on FirebaseAuthException catch (e) {
+                  print(e.code);
+                  if (e.code == 'user-not-found') {
+                    Fluttertoast.showToast(  msg: "User Not Found",
+                        toastLength: Toast.LENGTH_SHORT,
+                        gravity: ToastGravity.CENTER,
+                        timeInSecForIosWeb: 1,
+                        backgroundColor: Colors.red,
+                        textColor: Colors.white,
+                        fontSize: 16.0);
+                  } else if (e.code == 'wrong-password') {
+                    Fluttertoast.showToast(msg: "Wrong Password",
+                        toastLength: Toast.LENGTH_SHORT,                      
+                        fontSize: 16.0);
+                  } else {}
+                }
+              },
+              child: Text('Signin')),
           SizedBox(
             height: 20,
           ),

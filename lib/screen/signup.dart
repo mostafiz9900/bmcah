@@ -51,6 +51,7 @@ class SignupPage extends StatelessWidget {
                 onPressed: () async {
                   print(emailController.text);
                   print(passwordController.text);
+                 
                   try {
                     final user = await auth.createUserWithEmailAndPassword(
                         email: emailController.text.toString(),
