@@ -1,3 +1,4 @@
+import 'package:bmcah/screen/department_details.dart';
 import 'package:bmcah/screen/deptartment.dart';
 import 'package:bmcah/screen/doctors_view.dart';
 import 'package:bmcah/screen/home.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         '/signup':(context)=>SignupPage(),
         '/dept':(context)=>DepartmentView(),
         '/doctor':(context)=>DoctorsView(),
+        '/dept_details':(context)=>DepartmentDetails(),
       },
     );
   }
