@@ -1,3 +1,5 @@
+import 'package:bmcah/screen/deptartment.dart';
+import 'package:bmcah/screen/doctors_view.dart';
 import 'package:bmcah/screen/home.dart';
 import 'package:bmcah/screen/signin.dart';
 import 'package:bmcah/screen/signup.dart';
@@ -22,11 +24,13 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blueGrey,
       ),
       // home:SigninPage() ,
-      initialRoute: '/signin',
+      initialRoute: '/',
       routes: {
         '/':(context)=>HomePage(),
         '/signin':(context)=>SigninPage(),
         '/signup':(context)=>SignupPage(),
+        '/dept':(context)=>DepartmentView(),
+        '/doctor':(context)=>DoctorsView(),
       },
     );
   }

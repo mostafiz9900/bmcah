@@ -1,3 +1,4 @@
+import 'package:bmcah/screen/global_widgets/my_drawer.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -5,11 +6,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey.shade400,
+      endDrawer: MyDrawer(),
       appBar: AppBar(
         title: Text('HomePage'),
       ),
       body: SingleChildScrollView(
-        child: Column(  
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -24,18 +26,22 @@ class HomePage extends StatelessWidget {
                   child: _customButton(
                     context: context,
                     name: 'Department',
-                    color: Colors.amber.shade400,
+                    color: Colors.pink.shade100,
                     iconData: Icons.departure_board,
-                    onTab: () {},
+                    onTab: () {
+                      Navigator.pushNamed(context, '/dept');
+                    },
                   ),
                 ),
                 Expanded(
                   child: _customButton(
                     context: context,
-                    name: 'Department',
+                    name: 'Doctors',
                     color: Colors.blueGrey.shade400,
                     iconData: Icons.account_balance_wallet,
-                    onTab: () {},
+                    onTab: () {
+                      Navigator.pushNamed(context, '/doctor');
+                    },
                   ),
                 ),
               ],
