@@ -1,10 +1,10 @@
-import 'package:bmcah/constants/app_constants.dart';
-import 'package:bmcah/screen/department_details.dart';
-import 'package:bmcah/screen/deptartment.dart';
-import 'package:bmcah/screen/doctors_view.dart';
-import 'package:bmcah/screen/home.dart';
-import 'package:bmcah/screen/signin.dart';
-import 'package:bmcah/screen/signup.dart';
+import '../constants/app_constants.dart';
+import '../screens/department_details.dart';
+import '../screens/deptartment.dart';
+import '../screens/doctors_view.dart';
+import '../screens/home.dart';
+import '../screens/signin.dart';
+import '../screens/signup.dart';
 
 class AppRoutes {
   static final myInitRoute = AppConstant.homePage;
