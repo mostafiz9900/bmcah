@@ -1,3 +1,4 @@
+import 'package:bmcah/constants/app_constants.dart';
 import 'package:bmcah/models/department_details_model.dart';
 import 'package:bmcah/models/department_model.dart';
 import 'package:bmcah/screen/global_widgets/my_drawer.dart';
@@ -6,6 +7,7 @@ import 'package:flutter/material.dart';
 class DepartmentView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    
     List<Department> deptList = [
       Department(id: 1, name: 'Bangla', img: '',
       deptDetils: DepartmentDetailsModel(
@@ -46,10 +48,10 @@ class DepartmentView extends StatelessWidget {
                 onPressed: () {
                   if(deptList.elementAt(index).id==1){
                     Department bngDept=deptList[0];
-                  Navigator.pushNamed(context, '/dept_details',arguments: bngDept);
-                  }else   if(deptList.elementAt(index).id==2){
+                  Navigator.pushNamed(context, AppConstant.deptDetailPage,arguments: bngDept);
+                  }else if(deptList.elementAt(index).id==2){
                     Department bngDept=deptList[1];
-                  Navigator.pushNamed(context, '/dept_details',arguments: bngDept);
+                  Navigator.pushNamed(context, AppConstant.deptDetailPage,arguments: bngDept);
                   }
                  
                 },

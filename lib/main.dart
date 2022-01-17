@@ -1,3 +1,4 @@
+import 'package:bmcah/config/routes.dart';
 import 'package:bmcah/screen/department_details.dart';
 import 'package:bmcah/screen/deptartment.dart';
 import 'package:bmcah/screen/doctors_view.dart';
@@ -15,9 +16,10 @@ Future<void> main() async {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key); 
+  const MyApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
@@ -25,15 +27,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blueGrey,
       ),
       // home:SigninPage() ,
-      initialRoute: '/',
-      routes: {
-        '/':(context)=>HomePage(),
-        '/signin':(context)=>SigninPage(),
-        '/signup':(context)=>SignupPage(),
-        '/dept':(context)=>DepartmentView(),
-        '/doctor':(context)=>DoctorsView(),
-        '/dept_details':(context)=>DepartmentDetails(),
-      },
+      initialRoute: AppRoutes.myInitRoute,
+      routes: AppRoutes.routes,
     );
   }
 }

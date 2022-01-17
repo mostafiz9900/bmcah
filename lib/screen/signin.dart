@@ -1,3 +1,4 @@
+import 'package:bmcah/constants/app_constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -56,7 +57,7 @@ class SigninPage extends StatelessWidget {
                       password: passwordController.text.toString().trim());
                   if (user != null) {
                     print(user);
-                    Navigator.pushNamed(context, '/');
+                    Navigator.pushNamed(context, AppConstant.homePage);
                   }
                 } on FirebaseAuthException catch (e) {
                   print(e.code);
@@ -85,7 +86,7 @@ class SigninPage extends StatelessWidget {
               Text("Do not have an account?"),
               TextButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/signup');
+                  Navigator.pushNamed(context,AppConstant.signupPage);
                 },
                 child: Text(
                   "Sign Up",
