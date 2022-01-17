@@ -9,14 +9,21 @@ class DepartmentDetails extends StatelessWidget {
       appBar: AppBar(
         title: Text('DepartmentDetails'),
       ),
-      body: Center(
-        child: Column(
-          children: [
-            Text('${arg.name}'),
-            Text('${arg.deptDetils!.title}'),
-            Text('${arg.deptDetils!.dec}'),
-          ],
-        ),
+      body: Column(
+        children: [
+          Row(
+            children: [
+              Image.asset(
+                '${arg.img}',
+                width: 60,
+                height: 40,
+              ),
+              Text('${arg.name}'),
+              Text('${arg.deptDetils!.title}'),
+              Text('${arg.deptDetils!.dec}'),
+            ],
+          )
+        ],
       ),
     );
   }

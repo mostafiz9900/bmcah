@@ -9,7 +9,7 @@ class DepartmentView extends StatelessWidget {
   Widget build(BuildContext context) {
     
     List<Department> deptList = [
-      Department(id: 1, name: 'Bangla', img: '',
+      Department(id: 1, name: 'Bangla', img: 'assets/images/logo.png',
       deptDetils: DepartmentDetailsModel(
         id: 1,
         name: 'bng',
