@@ -1,5 +1,6 @@
+import 'package:bmcah/config/routes.dart';
 import 'package:bmcah/constants/app_constants.dart';
-import 'package:bmcah/screen/global_widgets/my_drawer.dart';
+import '../screens/global_widgets/my_drawer.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -41,7 +42,7 @@ class HomePage extends StatelessWidget {
                     color: Colors.blueGrey.shade400,
                     iconData: Icons.account_balance_wallet,
                     onTab: () {
-                      Navigator.pushNamed(context,AppConstant.doctorPage);
+                      Navigator.pushNamed(context, AppConstant.doctorPage);
                     },
                   ),
                 ),
@@ -78,10 +79,12 @@ class HomePage extends StatelessWidget {
                 Expanded(
                   child: _customButton(
                     context: context,
-                    name: 'Department',
+                    name: 'User List',
                     color: Colors.amber.shade400,
                     iconData: Icons.departure_board,
-                    onTab: () {},
+                    onTab: () {
+                      Navigator.pushNamed(context, AppConstant.userPage);
+                    },
                   ),
                 ),
                 Expanded(

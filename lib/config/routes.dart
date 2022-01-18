@@ -1,3 +1,5 @@
+import '../screens/user_view.dart';
+
 import '../constants/app_constants.dart';
 import '../screens/department_details.dart';
 import '../screens/deptartment.dart';
@@ -15,5 +17,6 @@ class AppRoutes {
     AppConstant.deptPage: (context) => DepartmentView(),
     AppConstant.doctorPage: (context) => DoctorsView(),
     AppConstant.deptDetailPage: (context) => DepartmentDetails(),
+    AppConstant.userPage: (context) => UserView(),
   };
 }

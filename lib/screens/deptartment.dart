@@ -1,7 +1,7 @@
 import 'package:bmcah/constants/app_constants.dart';
 import 'package:bmcah/models/department_details_model.dart';
 import 'package:bmcah/models/department_model.dart';
-import 'package:bmcah/screen/global_widgets/my_drawer.dart';
+import '../screens/global_widgets/my_drawer.dart';
 import 'package:flutter/material.dart';
 
 class DepartmentView extends StatelessWidget {

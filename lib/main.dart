@@ -1,10 +1,4 @@
 import 'package:bmcah/config/routes.dart';
-import 'package:bmcah/screen/department_details.dart';
-import 'package:bmcah/screen/deptartment.dart';
-import 'package:bmcah/screen/doctors_view.dart';
-import 'package:bmcah/screen/home.dart';
-import 'package:bmcah/screen/signin.dart';
-import 'package:bmcah/screen/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 
