@@ -1,4 +1,5 @@
 import 'package:bmcah/models/doctor_model.dart';
+import 'package:bmcah/repositories/doctor_ropo.dart';
 import 'package:flutter/material.dart';
 
 class DoctorsView extends StatelessWidget {
@@ -19,19 +20,20 @@ class DoctorsView extends StatelessWidget {
         itemCount: doctorList.length,
         itemBuilder: (context, index) {
           return ListTile(
-              leading: CircleAvatar(
-                child: Text('${doctorList.elementAt(index).id}'),
-              ),
-              title: Text(
-                '${doctorList.elementAt(index).name}',
-                style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
-              ),
-              trailing: Icon(Icons.phone),
-              onTap: () {
-                
-              },
-              
-              );
+            leading: CircleAvatar(
+              child: Text('${doctorList.elementAt(index).id}'),
+            ),
+            title: Text(
+              '${doctorList.elementAt(index).name}',
+              style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+            ),
+            trailing: Icon(Icons.phone),
+            onTap: () async {
+              List<DoctorModel> doctors = await DoctorRepo.getDoctorList();
+              print(doctors.length);
+              print(doctors[0].name);
+            },
+          );
         },
       ),
     );

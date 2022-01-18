@@ -9,11 +9,11 @@ class AddressModel {
   AddressModel({ this.id,this.street,this.suite,this.city,this.zipcode });
 
   AddressModel.fromJson(Map<String, dynamic> json){
-      this.id = json['id'];
-      this.street = json['street'];
-      this.suite = json['suite'];
-      this.city = json['city'];
-      this.zipcode = json['zipcode'];
+      id = json['id'];
+      street = json['street'];
+      suite = json['suite'];
+      city = json['city'];
+      zipcode = json['zipcode'];
   }
 
  
