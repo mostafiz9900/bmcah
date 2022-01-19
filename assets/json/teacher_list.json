@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "name":"Dr Najnin Akhter",
+        "des":"Assistant Professor",
+        "dept":"Anatomy",
+        "edu":"MBBS, MS (Anatomy)",
+        "img":"https://bmchbd.com/images/_soft/doctor/doctor_Name_1598241812_dr_najnin_akhter_370x430.jpg",
+        "fb_link":"https://bmchbd.com/teachers-profile.php?doctor_Id=57#",
+        "tw_link":"https://bmchbd.com/teachers-profile.php?doctor_Id=57#",
+        "gl_link":"https://bmchbd.com/teachers-profile.php?doctor_Id=57#",
+        "in_link":"https://bmchbd.com/teachers-profile.php?doctor_Id=57#"
+    },
+    {
+        "id":2,
+        "name":"Prof Brig Gen (Rtd) Md Shafiqul Islam",
+        "des":"Professor & Head",
+        "dept":"Community-Medicine",
+        "edu":"MBBS, DPH, M Phil",
+        "img":"https://bmchbd.com/images/_soft/doctor/doctor_Name_1583732540_prof_brig_gen_(rtd)_md_shafiqul_islam_370x430.jpg",
+        "fb_link":"https://bmchbd.com/teachers-profile.php?doctor_Id=7#",
+        "tw_link":"https://bmchbd.com/teachers-profile.php?doctor_Id=7#",
+        "gl_link":"https://bmchbd.com/teachers-profile.php?doctor_Id=7#",
+        "in_link":"https://bmchbd.com/teachers-profile.php?doctor_Id=7#"
+    }
+]

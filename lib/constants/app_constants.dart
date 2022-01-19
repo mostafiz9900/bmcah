@@ -7,4 +7,5 @@ class AppConstant {
   static const deptDetailPage ='/dept_details';
   static const userPage ='/users';
   static const academicPage ='/academic';
+  static const teacherPage ='/tec';
 }

@@ -1,4 +1,5 @@
 import 'package:bmcah/screens/academic_view.dart';
+import 'package:bmcah/screens/teacher_view.dart';
 
 import '../screens/user_view.dart';
 
@@ -21,5 +22,6 @@ class AppRoutes {
     AppConstant.deptDetailPage: (context) => DepartmentDetails(),
     AppConstant.userPage: (context) => UserView(),
     AppConstant.academicPage: (context) => AcademicView(),
+    AppConstant.teacherPage: (context) => TeacherView(),
   };
 }
