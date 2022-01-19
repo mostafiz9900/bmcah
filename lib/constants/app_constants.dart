@@ -8,4 +8,5 @@ class AppConstant {
   static const userPage ='/users';
   static const academicPage ='/academic';
   static const teacherPage ='/tec';
+  static const investPage ='/investigation';
 }

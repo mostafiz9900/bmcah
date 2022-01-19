@@ -67,6 +67,7 @@ flutter:
     - assets/json/doctor_list.json
     - assets/json/academic.json
     - assets/json/teacher_list.json
+    - assets/json/investigation.json
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

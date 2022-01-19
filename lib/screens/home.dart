@@ -95,10 +95,12 @@ class HomePage extends StatelessWidget {
                 Expanded(
                   child: _customButton(
                     context: context,
-                    name: 'Department',
+                    name: 'Investigation',
                     color: Colors.blueGrey.shade400,
                     iconData: Icons.account_balance_wallet,
-                    onTab: () {},
+                    onTab: () {
+                      Navigator.pushNamed(context, AppConstant.investPage);
+                    },
                   ),
                 ),
               ],
