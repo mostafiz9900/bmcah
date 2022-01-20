@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:bmcah/config/routes.dart';
 import 'package:bmcah/constants/app_constants.dart';
 import 'package:bmcah/repositories/teacher_repo.dart';
@@ -13,8 +15,20 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('HomePage'),
       ),
-      body: SingleChildScrollView(
-        child: Column(
+      body:SizedBox(
+        height: MediaQuery.of(context).size.height,
+        width: double.maxFinite,
+        child: Stack(
+      fit: StackFit.expand,
+      children: [
+        ImageFiltered(
+          imageFilter: ImageFilter.blur(sigmaX: 5, sigmaY: 4),
+          child: Image.asset(
+            'assets/images/logo.png',
+            fit: BoxFit.cover,
+          ),
+        ),
+        Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -106,8 +120,12 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ],
+        ), 
+      ],
         ),
       ),
+         
+        
     );
   }
 
