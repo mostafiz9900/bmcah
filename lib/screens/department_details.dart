@@ -19,8 +19,8 @@ class DepartmentDetails extends StatelessWidget {
                 height: 40,
               ),
               Text('${arg.name}'),
-              Text('${arg.deptDetils!.title}'),
-              Text('${arg.deptDetils!.dec}'),
+              // Text('${arg.deptDetils!.title}'),
+              // Text('${arg.deptDetils!.dec}'),
             ],
           )
         ],

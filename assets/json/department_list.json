@@ -1,0 +1,75 @@
+[
+    {
+        "id":1,
+        "name":"Name One",
+        "img":"",
+        "doctor_list":[
+            {
+                "id":1,
+                "name":"doctor name",
+                "img":"image pagth",
+                "education":"education ",
+                "des":"",
+                "reg":"",
+                "email":"",
+                "phone":""
+            },   
+            {
+                "id":1,
+                "name":"doctor name",
+                "img":"image pagth",
+                "education":"education ",
+                "des":"",
+                "reg":"",
+                "email":"",
+                "phone":""
+            },  
+             {
+                "id":1,
+                "name":"doctor name",
+                "img":"image pagth",
+                "education":"education ",
+                "des":"",
+                "reg":"",
+                "email":"",
+                "phone":""
+            }
+        ]
+    },
+    {
+        "id":2,
+        "name":"Name One",
+        "doctor_list":[
+            {
+                "id":1,
+                "name":"doctor name",
+                "img":"image pagth",
+                "education":"education ",
+                "des":"",
+                "reg":"",
+                "email":"",
+                "phone":""
+            },   
+            {
+                "id":1,
+                "name":"doctor name",
+                "img":"image pagth",
+                "education":"education ",
+                "des":"",
+                "reg":"",
+                "email":"",
+                "phone":""
+            },  
+             {
+                "id":1,
+                "name":"doctor name",
+                "img":"image pagth",
+                "education":"education ",
+                "des":"",
+                "reg":"",
+                "email":"",
+                "phone":""
+            }
+        ]
+    }
+]

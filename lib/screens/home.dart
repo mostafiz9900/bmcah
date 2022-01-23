@@ -15,117 +15,116 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('HomePage'),
       ),
-      body:SizedBox(
+      body: SizedBox(
         height: MediaQuery.of(context).size.height,
         width: double.maxFinite,
         child: Stack(
-      fit: StackFit.expand,
-      children: [
-        ImageFiltered(
-          imageFilter: ImageFilter.blur(sigmaX: 5, sigmaY: 4),
-          child: Image.asset(
-            'assets/images/logo.png',
-            fit: BoxFit.cover,
-          ),
-        ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
+          fit: StackFit.expand,
           children: [
-            SizedBox(
-              height: 10.0,
+            ImageFiltered(
+              imageFilter: ImageFilter.blur(sigmaX: 5, sigmaY: 4),
+              child: Image.asset(
+                'assets/images/logo.png',
+                fit: BoxFit.fill,
+              ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Expanded(
-                  child: _customButton(
-                    context: context,
-                    name: 'Department',
-                    color: Colors.pink.shade100,
-                    iconData: Icons.departure_board,
-                    onTab: () {
-                      Navigator.pushNamed(context, AppConstant.deptPage);
-                    },
-                  ),
+                SizedBox(
+                  height: 10.0,
                 ),
-                Expanded(
-                  child: _customButton(
-                    context: context,
-                    name: 'Doctors',
-                    color: Colors.blueGrey.shade400,
-                    iconData: Icons.account_balance_wallet,
-                    onTab: () {
-                      Navigator.pushNamed(context, AppConstant.doctorPage);
-                    },
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: _customButton(
+                        context: context,
+                        name: 'Department',
+                        color: Colors.pink.shade100,
+                        iconData: Icons.departure_board,
+                        onTab: () {
+                          Navigator.pushNamed(context, AppConstant.deptPage);
+                        },
+                      ),
+                    ),
+                    Expanded(
+                      child: _customButton(
+                        context: context,
+                        name: 'Doctors',
+                        color: Colors.blueGrey.shade400,
+                        iconData: Icons.account_balance_wallet,
+                        onTab: () {
+                          Navigator.pushNamed(context, AppConstant.doctorPage);
+                        },
+                      ),
+                    ),
+                  ],
                 ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Expanded(
-                  child: _customButton(
-                    context: context,
-                    name: ' ACADEMIC',
-                    color: Colors.amber.shade400,
-                    iconData: Icons.departure_board,
-                    onTab: () {
-                      Navigator.pushNamed(context, AppConstant.academicPage);
-                    },
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: _customButton(
+                        context: context,
+                        name: ' ACADEMIC',
+                        color: Colors.amber.shade400,
+                        iconData: Icons.departure_board,
+                        onTab: () {
+                          Navigator.pushNamed(
+                              context, AppConstant.academicPage);
+                        },
+                      ),
+                    ),
+                    Expanded(
+                      child: _customButton(
+                        context: context,
+                        name: 'Teachers',
+                        color: Colors.lightBlue.shade400,
+                        iconData: Icons.account_balance_wallet,
+                        onTab: () {
+                          Navigator.pushNamed(context, AppConstant.teacherPage);
+                        },
+                      ),
+                    ),
+                  ],
                 ),
-                Expanded(
-                  child: _customButton(
-                    context: context,
-                    name: 'Teachers',
-                    color: Colors.lightBlue.shade400,
-                    iconData: Icons.account_balance_wallet,
-                    onTab: () {
-                      Navigator.pushNamed(context, AppConstant.teacherPage);
-                    },
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Expanded(
-                  child: _customButton(
-                    context: context,
-                    name: 'User List',
-                    color: Colors.amber.shade400,
-                    iconData: Icons.departure_board,
-                    onTab: () {
-                      Navigator.pushNamed(context, AppConstant.userPage);
-                    },
-                  ),
-                ),
-                Expanded(
-                  child: _customButton(
-                    context: context,
-                    name: 'Investigation',
-                    color: Colors.blueGrey.shade400,
-                    iconData: Icons.account_balance_wallet,
-                    onTab: () {
-                      Navigator.pushNamed(context, AppConstant.investPage);
-                    },
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: _customButton(
+                        context: context,
+                        name: 'User List',
+                        color: Colors.amber.shade400,
+                        iconData: Icons.departure_board,
+                        onTab: () {
+                          Navigator.pushNamed(context, AppConstant.userPage);
+                        },
+                      ),
+                    ),
+                    Expanded(
+                      child: _customButton(
+                        context: context,
+                        name: 'Investigation',
+                        color: Colors.blueGrey.shade400,
+                        iconData: Icons.account_balance_wallet,
+                        onTab: () {
+                          Navigator.pushNamed(context, AppConstant.investPage);
+                        },
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
           ],
-        ), 
-      ],
         ),
       ),
-         
-        
     );
   }
 

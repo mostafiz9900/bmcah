@@ -18,6 +18,10 @@ class InvestigationModel {
     int? id;
     String? name;
     String? price;
+  @override
+  String toString() {
+    return '$name';
+  }
 
     factory InvestigationModel.fromJson(Map<String, dynamic> json) => InvestigationModel(
         id: json["id"],

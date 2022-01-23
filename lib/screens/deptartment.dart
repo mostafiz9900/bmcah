@@ -1,59 +1,57 @@
-import 'package:bmcah/constants/app_constants.dart';
-import 'package:bmcah/models/department_details_model.dart';
+
 import 'package:bmcah/models/department_model.dart';
+import 'package:bmcah/repositories/department_repo.dart';
 import '../screens/global_widgets/my_drawer.dart';
 import 'package:flutter/material.dart';
 
-class DepartmentView extends StatelessWidget {
+class DepartmentView extends StatefulWidget {
+  @override
+  State<DepartmentView> createState() => _DepartmentViewState();
+}
+
+class _DepartmentViewState extends State<DepartmentView> {
+  List<Department> depList = [];
+  @override
+  void initState() {
+    super.initState();
+    DepartmentRepo.getDepartmentList().then((value) {
+      setState(() {
+        print('ekhane ase');
+        print(value);
+        depList.addAll(value);
+        print(depList[0].name);
+      });
+    }).onError((error, stackTrace) {
+      print(error);
+      print('object');
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    
-    List<Department> deptList = [
-      Department(id: 1, name: 'Bangla', img: 'assets/images/logo.png',
-      deptDetils: DepartmentDetailsModel(
-        id: 1,
-        name: 'bng',
-        title: 'Bangla one',
-        dec: 'in sfsf',
-        img: ''
-
-      ),
-      ),
-      Department(id: 2, name: 'English', img: '',
-      deptDetils: DepartmentDetailsModel(
-        id: 1,
-        name: 'eng',
-        title: 'english one',
-        dec: 'in sfsf',
-        img: ''
-
-      ),),
-      Department(id: 3, name: 'Marketin', img: ''),
-      Department(id: 4, name: 'Account', img: ''),
-      Department(id: 5, name: 'Management', img: ''),
-      Department(id: 6, name: 'CSE', img: ''),
-      Department(id: 7, name: 'Math', img: ''),
-    ];
+    List<Department> deptList = [];
     return Scaffold(
-      endDrawer: MyDrawer(),
-      appBar: AppBar(
-        title: Text('Departments'),
-      ),
-      body: ListView.builder(
+        endDrawer: MyDrawer(),
+        appBar: AppBar(
+          title: Text('Departments'),
+        ),
+        body: Text('depalis')
+        /*   ListView.builder(
         itemCount: deptList.length,
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: ElevatedButton(
                 onPressed: () {
-                  if(deptList.elementAt(index).id==1){
-                    Department bngDept=deptList[0];
-                  Navigator.pushNamed(context, AppConstant.deptDetailPage,arguments: bngDept);
-                  }else if(deptList.elementAt(index).id==2){
-                    Department bngDept=deptList[1];
-                  Navigator.pushNamed(context, AppConstant.deptDetailPage,arguments: bngDept);
+                  if (deptList.elementAt(index).id == 1) {
+                    Department bngDept = deptList[0];
+                    Navigator.pushNamed(context, AppConstant.deptDetailPage,
+                        arguments: bngDept);
+                  } else if (deptList.elementAt(index).id == 2) {
+                    Department bngDept = deptList[1];
+                    Navigator.pushNamed(context, AppConstant.deptDetailPage,
+                        arguments: bngDept);
                   }
-                 
                 },
                 style: ElevatedButton.styleFrom(
                     primary: Colors.grey.shade500,
@@ -64,7 +62,7 @@ class DepartmentView extends StatelessWidget {
                 )),
           );
         },
-      ),
-    );
+      ), */
+        );
   }
 }
