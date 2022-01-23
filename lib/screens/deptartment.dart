@@ -28,41 +28,40 @@ class _DepartmentViewState extends State<DepartmentView> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    List<Department> deptList = [];
+  Widget build(BuildContext context) {   
     return Scaffold(
         endDrawer: MyDrawer(),
         appBar: AppBar(
           title: Text('Departments'),
         ),
-        body: Text('depalis')
-        /*   ListView.builder(
-        itemCount: deptList.length,
+        body: 
+          ListView.builder(
+        itemCount: depList.length,
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: ElevatedButton(
                 onPressed: () {
-                  if (deptList.elementAt(index).id == 1) {
-                    Department bngDept = deptList[0];
-                    Navigator.pushNamed(context, AppConstant.deptDetailPage,
-                        arguments: bngDept);
-                  } else if (deptList.elementAt(index).id == 2) {
-                    Department bngDept = deptList[1];
-                    Navigator.pushNamed(context, AppConstant.deptDetailPage,
-                        arguments: bngDept);
-                  }
+                  // if (deptList.elementAt(index).id == 1) {
+                  //   Department bngDept = deptList[0];
+                  //   Navigator.pushNamed(context, AppConstant.deptDetailPage,
+                  //       arguments: bngDept);
+                  // } else if (deptList.elementAt(index).id == 2) {
+                  //   Department bngDept = deptList[1];
+                  //   Navigator.pushNamed(context, AppConstant.deptDetailPage,
+                  //       arguments: bngDept);
+                  // }
                 },
                 style: ElevatedButton.styleFrom(
                     primary: Colors.grey.shade500,
                     padding: EdgeInsets.symmetric(vertical: 10.0)),
                 child: Text(
-                  '${deptList.elementAt(index).name}',
+                  '${depList.elementAt(index).name}',
                   style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
                 )),
           );
         },
-      ), */
+      ),
         );
   }
 }
