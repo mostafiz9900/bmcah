@@ -70,6 +70,7 @@ flutter:
     - assets/json/teacher_list.json
     - assets/json/investigation.json
     - assets/json/department_list.json
+    - assets/json/web_link.json
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

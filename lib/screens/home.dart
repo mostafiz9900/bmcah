@@ -120,6 +120,17 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
+                 Expanded(
+                      child: _customButton(
+                        context: context,
+                        name: 'Web Link',
+                        color: Colors.blueGrey.shade400,
+                        iconData: Icons.account_balance_wallet,
+                        onTab: () {
+                          Navigator.pushNamed(context, AppConstant.webPage);
+                        },
+                      ),
+                    ),
               ],
             ),
           ],
