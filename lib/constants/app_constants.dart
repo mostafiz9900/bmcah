@@ -10,4 +10,5 @@ class AppConstant {
   static const teacherPage ='/tec';
   static const investPage ='/investigation';
   static const webPage ='/weblinkview';
+  static const webSitePage ='/web_site_view';
 }

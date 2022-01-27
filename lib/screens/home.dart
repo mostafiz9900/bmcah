@@ -120,17 +120,28 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
-                 Expanded(
-                      child: _customButton(
-                        context: context,
-                        name: 'Web Link',
-                        color: Colors.blueGrey.shade400,
-                        iconData: Icons.account_balance_wallet,
-                        onTab: () {
-                          Navigator.pushNamed(context, AppConstant.webPage);
-                        },
-                      ),
+                Row(
+                  children: [
+                    _customButton(
+                      context: context,
+                      name: 'Web Link',
+                      color: Colors.blueGrey.shade400,
+                      iconData: Icons.account_balance_wallet,
+                      onTab: () {
+                        Navigator.pushNamed(context, AppConstant.webPage);
+                      },
                     ),
+                    _customButton(
+                      context: context,
+                      name: 'Web View',
+                      color: Colors.blueGrey.shade400,
+                      iconData: Icons.account_balance_wallet,
+                      onTab: () {
+                        Navigator.pushNamed(context, AppConstant.webSitePage);
+                      },
+                    ),
+                  ],
+                ),
               ],
             ),
           ],
