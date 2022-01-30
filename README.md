@@ -1,16 +1,16 @@
-# bmcah
+# Brahmanbaria Medical College
 
-A new Flutter project.
+Duniyar sera app. Ei app install korben to life jingalala.
 
-## Getting Started
+## Featues
+ - All doctors informations of Brahmanbaria medical college.
+ - Contacts of all doctors.
 
-This project is a starting point for a Flutter application.
+## Screenshots
+<img src="screenshots/bmch.jpg" height="245"> <img src="screenshots/bmch.jpg" height="245">
 
-A few resources to get you started if this is your first Flutter project:
+## Download Apk
+[Download BMCAH.apk](https://www.google.com)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Developer
+hello, i am developer, my email is [email](mailto:mymail@gmail.com)
