@@ -1,3 +1,4 @@
+import 'package:bmcah/config/helper.dart';
 import 'package:bmcah/models/web_link.dart';
 import 'package:bmcah/repositories/app_repo.dart';
 import 'package:flutter/material.dart';
@@ -11,13 +12,13 @@ class WebLinkView extends StatefulWidget {
 class _WebLinkViewState extends State<WebLinkView> {
   final String _url = 'https://flutter.dev';
   List<WebModel> webModel = [];
-void _launchURL() async {
-  if (await canLaunch(_url)) {
-    await launch(_url);
-  } else {
-    throw 'could not launch $_url';
+  void _launchURL() async {
+    if (await canLaunch(_url)) {
+      await launch(_url);
+    } else {
+      throw 'could not launch $_url';
+    }
   }
-}
 
   @override
   void initState() {
@@ -39,8 +40,16 @@ void _launchURL() async {
         itemCount: webModel.length,
         itemBuilder: (context, index) {
           return ElevatedButton(
-              onPressed: () {
-                _launchURL();
+              onPressed: () async {
+                if (await initConnectivity()) {
+                  _launchURL();
+                } else {
+                  print('Ekhane asi');
+                  final snackBar = SnackBar(
+                    content: const Text('Plz connection Net!'),
+                  );
+                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                }
               },
               child: Text('${webModel.elementAt(index).name}'));
         },
